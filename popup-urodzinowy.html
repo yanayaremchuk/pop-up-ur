@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        
+/*************************************/
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a {
+	color: inherit;
+}
+a:link,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+img{
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+}
+button {
+	cursor: pointer;
+	color: inherit;
+	background-color: inherit;
+}
+body {
+	line-height: 1;
+}
+
+/**********************************************/
+
+
+body{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: cadetblue;
+   /* margin: 100px;*/
+}
+.popup-birthday {
+    display: flex;
+    width: 662px;
+    height: 698px;
+   /* gap:24px;*/
+    border-radius: 20px;
+background: #FFF;
+}
+.popup-birthday__img {
+    flex: 0 0 282px;
+    border-radius: 20px;
+}
+.popup-birthday__img img{
+      border-radius: 20px;
+  }
+.popup-birthday__text {
+    flex: 0 0 385px;
+    color: #000;
+    padding-top: 24px;
+   /* padding-right: 32px;*/
+
+}
+.text-block {
+    width: 100%;
+}
+.text-block__title {
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+    padding-left: 36px;
+    line-height: 1.2;
+}
+.text-block__p {
+font-size: 14px;
+font-weight: 300;
+/*padding-bottom: 24px;*/
+padding-right: 68px;
+padding-left: 36px;
+line-height: 1.3;
+padding-bottom: 24px;
+}
+.text-block__p span{
+    font-weight: 400;
+    }
+.text-block__sale {
+    background-color: #4C4C4C;
+    width: 348px; /***?**/
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+   /* border: 1px solid red;*/
+    /*padding: -20px;*/
+    margin-bottom: 24px;
+   /* padding: 7px 0px;*/
+}
+ .text-block__sale p:first-child {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    margin-bottom: 0px;
+    /*padding-top: 5px;*/
+    margin: 0px;
+}
+.text-block__sale p:last-child  {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+  /*  padding-bottom: 5px;*/
+  margin: 0px;
+}
+.text-block__p-date{
+    color: #000;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 0px 31px 0px 31px;
+padding-bottom: 24px;
+
+}
+.text-block__p-date span{
+    font-weight: 700;
+}
+/*.text-block__sale--20::before {
+    content: "";
+    background: #9f9eb6;
+    width: 353px;
+    height: 56px;
+    position: relative;
+    top: 50px;
+    left: 0;
+    z-index: 10;
+}*/
+.text-block__sale--20 {
+   margin-right: 32px;
+   padding-left: 32px;
+}
+.text-block__sale--10 {
+    margin-left: 32px;
+    padding-right: 32px;
+}*/
+.text-block__form input{
+    display: flex;
+    width: 272px;
+    height: 50px;
+    padding-left: 0px;
+    flex-direction: column;
+    align-items: flex-start;   
+}
+.button-birthday {
+    font-size: 14px;
+    border-radius: 20px;
+    background: #000;
+    display: flex;
+    width: 60%;
+    padding: 11px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #FFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0 auto;
+    margin-top: 8px;
+}
+.button-birthday:hover {
+    color: black;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    }
+.text-block__form{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+.input-form{
+    margin: 0 auto;
+    
+    width: 276px;
+    height: 50px;
+    padding-left: 14px;
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;*/
+    border-radius: 5px;
+    border: 1px solid #9E9E9E;
+    color: #9E9E9E ;
+    gap:10px
+
+}
+.input-container label{
+color: #9E9E9E;
+position: absolute;
+top: 16.5px;
+left: 14px;
+
+}
+
+.input-container--date{
+    display: flex;
+
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+
+    margin: 0 auto;
+    width: 276px;
+    height: 50px;
+    display: flex;
+    padding-left: 0 100%;
+    border-radius: 15px;
+    border: 1px solid #ffffff;
+    color: #000000 ;
+  }
+  
+  .input-label {
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    pointer-events: none;
+    transition: top 0.1s, font-size 0.1s;
+    align-content: center;
+    background-color: #FFF;
+    font-size: 14px;
+   
+  }
+  input[type=text] {
+    height: 50px;
+    padding: 5px;
+    font-size: 14px;
+    color: #1c1f20;
+    border: 1px solid #9E9E9E;
+    background: #fff;
+    border-radius: 5px;
+}
+    </style>
+    <div class="popup-birthday">
+        <div class="popup-birthday__img">
+            <img src="https://cosibella.pl/data/include/cms/CMS/Pop-up/Depositphotos_391759850_XL_copy_3.png?v=1695328652765" alt="">
+        </div>
+        <div class="popup-birthday__text text-block">
+            <div class="text-block__title">
+                Podziel się z nami datą swoich urodzin!
+            </div>
+            <div class="text-block__p">
+              <span>Cieszymy się, że z nami jesteś! </span>  <br> 
+                Pragniemy poznać datę Twoich urodzin, abyśmy mogli świętować wspólnie i&nbsp;obdarować Cię wyjątkowymi prezentami.
+            </div>
+            <div class="text-block__sale text-block__sale--20">
+                <p>
+                    -20% <br>
+                </p>
+                <p>
+                 <strong>na konsultację</strong> kosmetologiczną
+                </p>
+            </div>
+            <div class="text-block__sale text-block__sale--10">
+                <p>
+                    -10% <br>
+                </p>
+                <p>
+                    na całą ofertę <strong>Cosibella.pl</strong> 
+                </p>
+            </div>
+            <div class="text-block__p-date">
+                <span>Jak to działa? To proste:</span>Wpisz swoją datę urodzenia w poniższym polu, a&nbsp;my będziemy pamiętać o&nbsp;tym wyjątkowym dniu! Wygenerujemy unikalny <span>kod zniżkowy i&nbsp;wyślemy go na Twój adres e-mail w&nbsp;dniu Twoich urodzin.</span> 
+            </div>
+          <!-- <div class="text-block__form">
+                <input class="input-form" type="text" id="name" name="name" placeholder="Imię">
+                <input class="input-form"  type="date" id="date" name="date" placeholder="DD/MM/RR">
+                <input class="input-form"  type="email" id="email" name="email" placeholder="Adres E-Mail">
+           
+            </div>-->
+            <form class="text-block__form" id="myForm">
+                <div class="input-container">
+                    <label for="username" class="input-label">Imię</label>
+                    <input class="input-form" type="text" id="username" name="username" placeholder="" >
+                  </div>
+                  <div class="input-container input-container--date">
+                    <label for="username" class="input-label"></label>
+                    <input class="input-form" style="text-transform: uppercase;" type="date" min="1923-01-01" id="date"  name="date" placeholder="DD/MM/RR">
+                  </div>
+                  <div class="input-container">
+                    <label for="username" class="input-label">Adres E-Mail</label>
+                    <input class="input-form" type="email" id="email" name="email" placeholder="">
+                  </div>
+                  <div class="text-block__button">
+                    <button class="button-birthday" type="submit">Świętuj z nami</button>
+           
+                 <!--   <a class="button-birthday" href="">Świętuj z nami</a>-->
+                </div>
+            </form>
+            
+        </div>
+        
+    </div>
+
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+   flatpickr('#date', {
+  dateFormat: 'd/m/y'
+});
+
+
+
+
+
+
+    // Вибираємо всі поля вводу
+var inputs = document.querySelectorAll('input[type="text"], input[type="email"]');
+
+// Перебираємо кожне поле вводу і додаємо обробник подій
+inputs.forEach(function(input) {
+  // Додаємо обробник події фокусу на полі вводу
+  input.addEventListener('focus', function() {
+    // Знаходимо відповідну мітку (label) за допомогою сусідства з полем вводу
+    var label = input.previousElementSibling;
+
+    // Змінюємо стиль мітки (наприклад, зміщуємо її вгору)
+    label.style.transform = 'translateY(-60%)'; // Зміщення вгору на 100%
+    label.style.fontSize = '12px';
+  });
+  
+  // Додаємо обробник події виходу з фокусу на полі вводу
+  input.addEventListener('blur', function() {
+    // Знаходимо відповідну мітку (label) за допомогою сусідства з полем вводу
+    var label = input.previousElementSibling;
+    
+    // Перевіряємо, чи поле вводу пусте
+    if (input.value === '') {
+      // Повертаємо мітку на початкову позицію
+      label.style.transform = 'translateY(0%)'; // Повернення на початкову позицію
+      label.style.fontSize = '14px';
+    }
+  });
+});
+
+
+// Вибираємо всі поля вводу
+// було так, я видалила дату var inputs = document.querySelectorAll('input[type="text"], input[type="date"], input[type="email"]');
+
+var inputs = document.querySelectorAll('input[type="text"], input[type="email"]');
+
+// Перебираємо кожне поле вводу і додаємо обробник подій
+inputs.forEach(function(input) {
+  // Додаємо обробник події фокусу на полі вводу
+  input.addEventListener('focus', function() {
+    // Знаходимо відповідну мітку (label) за допомогою сусідства з полем вводу
+    var label = input.previousElementSibling;
+    
+    // Змінюємо стиль мітки (наприклад, знижуємо верхній відступ)
+    label.style.top = '0px';
+    label.style.fontSize = '12px';
+  });
+  
+  // Додаємо обробник події виходу з фокусу на полі вводу
+  input.addEventListener('blur', function() {
+    // Знаходимо відповідну мітку (label) за допомогою сусідства з полем вводу
+    var label = input.previousElementSibling;
+    
+    // Перевіряємо, чи поле вводу пусте
+    if (input.value === '') {
+      // Повертаємо мітку на початкову позицію
+      label.style.top = '20px';
+      label.style.fontSize = '14px';
+    }
+  });
+});
+
+var currentDate = new Date();
+
+    // Форматуємо поточну дату у рядок у форматі "YYYY-MM-DD"
+    var formattedDate = currentDate.toISOString().substr(0, 10);
+
+    // Встановлюємо отриманий рядок як значення для атрибуту "max" поля вводу
+    document.getElementById('date').setAttribute('max', formattedDate);
+
+
+
+
+// Отримуємо форму та елементи вводу
+var form = document.getElementById('myForm');
+var nameInput = document.getElementById('username');
+var dateInput = document.getElementById('date');
+var emailInput = document.getElementById('email');
+
+// Функція для перевірки даних
+function validateData() {
+  var username = usernameInput.value.trim();
+  var date = dateInput.value;
+  var email = emailInput.value.trim();
+
+  // Перевірка даних
+  if (username === '') {
+    alert('Proszę wpisać imię');
+    return false; // Зупинити відправку форми
+  }
+
+  if (date === '') {
+    alert('Proszę wpisać datę urodzenia ');
+    return false; // Зупинити відправку форми
+  }
+
+  if (!isValidEmail(email)) {
+    alert('Proszę wpisać e-mail');
+    return false; // Зупинити відправку форми
+  }
+
+  return true; // Продовжити відправку форми
+}
+
+// Функція для перевірки правильності пошти
+function isValidEmail(email) {
+  var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  return emailRegex.test(email);
+}
+
+// Додаємо обробник події "submit" до форми
+form.addEventListener('submit', function(event) {
+  if (!validateData()) {
+    event.preventDefault(); // Зупиняємо відправку форми, якщо дані не пройшли перевірку
+  }
+});
+
+
+
+</script>
+</html>
